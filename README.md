@@ -77,8 +77,9 @@ Create a .dockerignore file in the same directory as your Dockerfile. This will 
 
 ## Dockerizing a nodejs web app
 
-- <https://nodejs.org/de/docs/guides/nodejs-docker-webapp>
+- <https://nodejs.org/de/docs/guides/nodejs-docker-webapp/>
 - create Dockerfile
 - docker build -t \<your username\>/node-web-app
+- docker run -p 49160:8080 -d <your username>/node-web-app
 - If you need to go inside the container you can use the exec command:
   - docker exec -it \<container id\> /bin/bash
