@@ -1,0 +1,15 @@
+version: "3"  #docker compose version three
+services:
+  common:
+    build: ../scs-demo-esi-common/  #pointer to Dockerfile
+  order:
+    build: ../scs-demo-esi-order   #pointer to Dockerfile
+  varnish:
+    build: varnish #pointer to Dockerfile
+    #The varnish service can the other services using the host 
+    # names common and order
+    links:  
+      - common
+      - order
+    ports:
+      - "8080:8080"
