@@ -18,7 +18,6 @@
 
 - Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default
 
-
 ## Use Case
 
 Running your own Registry is a great solution to integrate with and complement your CI/CD system. In a typical workflow, a commit to your source revision control system would trigger a build on your CI system, which would then push a new image to your Registry if the build is successful. A notification from the Registry would then trigger a deployment on a staging environment, or notify other systems that a new image is available.

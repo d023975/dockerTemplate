@@ -1,0 +1,8 @@
+version: '3'
+services:
+  pg:
+    image: postgres:9.4
+  frontend:
+    image: nginx
+    links:
+      - pg
